@@ -13,19 +13,20 @@ pipeline {
       }
     }
  
- stage('Infra') {
+ stage('Dev Infra Creation') {
       steps {
-        sh 'echo Infra'
+        sh 'echo Dev Infra Creation '
       }
     }
-  stage('Deploy') {
+  
+  stage('Dev Deploy') {
       steps {
-        sh 'echo Deploy'
+        sh 'echo Dev Deploy'
       }
     }
-  stage('Full Test') {
+  stage('Full Integration Test') {
       steps {
-        sh 'echo FullTest'
+        sh 'echo Full Integration Test'
       }
     }
  }
