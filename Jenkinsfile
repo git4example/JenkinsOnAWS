@@ -2,16 +2,33 @@ pipeline {
  agent {
         docker { image 'node:7-alpine' }
   }
-      stage('Build') {
+ 
+ stages {
+    stage('Build') {
+      steps {
         sh 'echo Build'
       }
-      stage('Test') {
-          sh 'echo Test'
+    }
+  stage('Test') {
+      steps {
+        sh 'echo Test'
       }
-      stage('Infra Creation') {
-          sh 'echo Infra Creation'
+    }
+ 
+ stage('Infra') {
+      steps {
+        sh 'echo Infra'
       }
-      stage('Deploy') {
-          sh 'echo Deploy'
+    }
+  stage('Deploy') {
+      steps {
+        sh 'echo Deploy'
       }
+    }
+  stage('Full Test') {
+      steps {
+        sh 'echo FullTest'
+      }
+    }
+ }
 }
